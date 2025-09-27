@@ -12,6 +12,78 @@ nav{
     z-index: 10;
     background-color: var(--dark);
 }
+/* Navbar basic styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  padding: 15px 20px;
+  background-color: #000;
+  font-family: 'Marcellus', serif;
+}
+
+.logo {
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
+
+.connect-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.connect-btn:hover {
+  background-color: #f0a500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap; /* allows links to wrap to next line */
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect-btn {
+    margin-top: 10px;
+  }
+}
+
 /* Hide nav links on mobile by default */
 @media (max-width: 768px) {
   .navLinks {
