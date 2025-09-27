@@ -12,6 +12,25 @@ nav{
     z-index: 10;
     background-color: var(--dark);
 }
+/* Hide nav links on mobile by default */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  /* Show nav when menu-toggle is active */
+  .menu-toggle.active + .navLinks {
+    display: flex;
+  }
+}
 
 .logo-img {
   height: 48px;      /* Adjust as needed */
